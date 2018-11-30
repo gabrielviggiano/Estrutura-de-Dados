@@ -27,9 +27,9 @@ o tempo de estadia na fresa eh 0.5 , 0.5 e 0.6 para cilindrico, aco e titanio, r
 o tempo de estadia no torno eh 0.8 , 1.8 , 1.0 e 1.6 para cilindrico, conico, aco e titanio, respectivamente.
 
 Entao resumindo tudo:
-Estadia_Mandril_Cilindrico 1.2
-Estadia_Fresa_Cilindrico 0.5
-Estadia_Torno_Cilindrico 0.8
+Estadia_Mandril_Cilindrico 1.2<br>
+Estadia_Fresa_Cilindrico 0.5<br>
+Estadia_Torno_Cilindrico 0.8<br>
 
 Estadia_Mandril_Conico 2.1
 Estadia_Torno_Conico 1.8
