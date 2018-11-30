@@ -55,45 +55,45 @@ Seu objetivo eh fazer um simulador dessa empresa que usando todos os dados defin
 A funcao gera_exponencial abaixo retorna o tempo que vai demorar para chegar outro pedido, passando como argumento a media de chegada do
 pedido que voce quer saber.<br>
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#include <time.h>
+#include <stdio.h><br>
+#include <stdlib.h><br>
+#include <math.h><br>
+#include <time.h><br>
 
-float Gera_Exponencial (float avg)
-{
-    float u=0; /* Gera randomicamente um numero entre 0 e 1 */
-    do 
-        u = ((float)rand()) / ((float) RAND_MAX);
-    while ((u==0) || (u==1));
-    return (-avg * log (u));
-}
+float Gera_Exponencial (float avg)<br>
+{<br>
+    float u=0; /* Gera randomicamente um numero entre 0 e 1 */<br>
+    do <br>
+        u = ((float)rand()) / ((float) RAND_MAX);<br>
+    while ((u==0) || (u==1));<br>
+    return (-avg * log (u));<br>
+}<br>
 
-para saber quanto tempo o rolamento vai ficar no maquinario, use a funcao abaixo: 
-float tempo(float Estadia_Equipamento_Rolamento)
-{
-    float u = ((float)rand()) / ((float) RAND_MAX);
-    return 2.0 * Estadia_Equipamento_Rolamento * u;
-}
+para saber quanto tempo o rolamento vai ficar no maquinario, use a funcao abaixo:<br> 
+float tempo(float Estadia_Equipamento_Rolamento)<br>
+{<br>
+    float u = ((float)rand()) / ((float) RAND_MAX);<br>
+    return 2.0 * Estadia_Equipamento_Rolamento * u;<br>
+}<br>
+<br>
+/*teste pra ver funcionando soh os geradores */<br>
+int main()<br>
+{<br>
+    srand(time(NULL));  /* <-- obrigatorio ter uma vez apenas no seu codigo */<br>
+    printf("%f \n" , Gera_Exponencial(21.5));<br>
+    printf("%f \n" , tempo(1.6));<br>
+    return 0;<br>
+}<br>
+a entrada será apenas o numero de clicks que seu codigo rodará;<br>
+ex:<br>
+./simulador 200<br>
+rodará por 200 segundos<br>
+a saida deve seguir o seguinte padrao:<br>
+$ ./oi.exe 1000000<br>
+Cilindros : 29.69       46768   <br>     
+Conicos   : 19.220    52096       <br>
+Aco       :   5.409       124385<br>
+Titanio   : 10.499      125468<br>
 
-/*teste pra ver funcionando soh os geradores */
-int main()
-{
-    srand(time(NULL));  /* <-- obrigatorio ter uma vez apenas no seu codigo */
-    printf("%f \n" , Gera_Exponencial(21.5));
-    printf("%f \n" , tempo(1.6));
-    return 0;
-}
-a entrada será apenas o numero de clicks que seu codigo rodará;
-ex:
-./simulador 200
-rodará por 200 segundos
-a saida deve seguir o seguinte padrao:
-$ ./oi.exe 1000000
-Cilindros : 29.69       46768        
-Conicos   : 19.220    52096       
-Aco       :   5.409       124385
-Titanio   : 10.499      125468
-
-O comando para impressao entao deve seguir o seguinte formato
-printf("<tipo de rolamento>   : %7.2f \t %d \n",variaveltempomedio, variavelquantidade);
+O comando para impressao entao deve seguir o seguinte formato<br>
+printf("<tipo de rolamento>   : %7.2f \t %d \n",variaveltempomedio, variavelquantidade);<br>
