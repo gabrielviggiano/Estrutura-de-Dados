@@ -1,6 +1,6 @@
 # Estrutura-de-Dados
 
-Sistema de chão de fábrica. Realizado na disciplina de Estrutura de Dados, ministrada por Flavio Lamas.<br>
+<b> Sistema de chão de fábrica. Realizado na disciplina de Estrutura de Dados, ministrada por Flavio Lamas.</b><br>
 
 Especificação do trabalho:<br>
 
@@ -54,3 +54,17 @@ Seu objetivo eh fazer um simulador dessa empresa que usando todos os dados defin
 
 A funcao gera_exponencial dada retorna o tempo que vai demorar para chegar outro pedido, passando como argumento a media de chegada do
 pedido que voce quer saber.
+
+A entrada será apenas o numero de clicks que seu codigo rodará;
+ex:
+./simulador 200
+rodará por 200 segundos
+a saida deve seguir o seguinte padrao:
+$ ./oi.exe 1000000
+Cilindros : 29.69       46768        
+Conicos   : 19.220    52096       
+Aco       :   5.409       124385
+Titanio   : 10.499      125468
+
+O comando para impressao entao deve seguir o seguinte formato
+printf("<tipo de rolamento>   : %7.2f \t %d \n",variaveltempomedio, variavelquantidade);
