@@ -1,4 +1,5 @@
 # Estrutura-de-Dados
+Status do projeto: Em andamento! <br>
 
 <b> Sistema de chão de fábrica. Realizado na disciplina de Estrutura de Dados, ministrada por Flavio Lamas.</b><br>
 
